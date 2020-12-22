@@ -14,7 +14,6 @@ const TodoList = () => {
 	);
 };
 
-			// <li>Lorem ipsum</li>
 			// <li>Lorem ipsum dolor</li>
 const AppHeader = () => {
 	return (
@@ -31,6 +30,8 @@ const SearchPanel = () => {
 const App = () => {
 	return (
 		<div>
+			
+			<li>{(new Date()).toString()}</li>
 			<AppHeader/>
 			<SearchPanel/>
 			<TodoList/>
