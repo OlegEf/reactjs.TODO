@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 // import './index.css';
 // import App from './App';
 // import reportWebVitals from './reportWebVitals';
-// const el=<h1>react element jsx</h1>;
-const el=React.createElement('h1',null,'react element');
+const el=<h1>react element jsx</h1>;
+// const el=React.createElement('h1',null,'react element');
 
 ReactDOM.render(el,document.getElementById('root'));
 
