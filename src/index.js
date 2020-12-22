@@ -25,17 +25,21 @@ const SearchPanel = () => {
 	);
 };
 
+const App = () => {
+	return (
+		<div>
+			<AppHeader/>
+			<SearchPanel/>
+			<TodoList/>
+		</div>
+	);
+};
 
-const el = (
-	<div>
-		<AppHeader/>
-		<SearchPanel/>
-		<TodoList/>
-	</div>
-);
+
+const el = <App/>;
 
 
-ReactDOM.render(el,document.getElementById('root'));
+ReactDOM.render(<App/>,document.getElementById('root'));
 
 // const el=React.createElement('h1',null,'react element');
 // ReactDOM.render(<App/>,document.getElementById('root')
