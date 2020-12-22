@@ -28,9 +28,10 @@ const SearchPanel = () => {
 };
 
 const App = () => {
+	const loginBox = <h1>loginBox</h1> ;
 	return (
 		<div>
-			
+			{loginBox}
 			<li>{(new Date()).toString()}</li>
 			<AppHeader/>
 			<SearchPanel/>
