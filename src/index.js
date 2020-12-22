@@ -5,14 +5,17 @@ import ReactDOM from 'react-dom';
 // import reportWebVitals from './reportWebVitals';
 
 const TodoList = () => {
+	const items = ['Learn React', 'Build Awesome App']; 
 	return (
 		<ul>
-			<li>Lorem ipsum</li>
-			<li>Lorem ipsum dolor</li>
+			<li>{items[0]}</li>
+			<li>{items[1]}</li>
 		</ul>
 	);
 };
 
+			// <li>Lorem ipsum</li>
+			// <li>Lorem ipsum dolor</li>
 const AppHeader = () => {
 	return (
 		<h1>my TodoList</h1>
