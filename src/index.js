@@ -28,9 +28,12 @@ const SearchPanel = () => {
 };
 
 const App = () => {
+	const isLogin = false;
+	// const isLogin = true;
 	const loginBox = <h1>loginBox</h1> ;
 	return (
 		<div>
+			{isLogin?null:loginBox}
 			{loginBox}
 			<li>{(new Date()).toString()}</li>
 			<AppHeader/>
