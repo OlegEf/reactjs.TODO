@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 const AppHeader = () => {
 	return (
@@ -7,4 +6,4 @@ const AppHeader = () => {
 	);
 };
 
-export defoult AppHeader
+export default AppHeader;
