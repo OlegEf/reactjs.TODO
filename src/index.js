@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import AppHeader from './components/app-header';
+import SearchPannel from './components/search-panel';
 
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
 			// {isLogin?null:loginBox}
 		<div>
 			<AppHeader/>
+			<SearchPannel/>
 
 		</div>
 	);
