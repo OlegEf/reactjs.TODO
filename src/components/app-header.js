@@ -2,7 +2,7 @@ import React from 'react';
 
 const AppHeader = () => {
 	return (
-		<h1>my TodoList</h1>
+		<h1 className="list-group-item">my TodoList</h1>
 	);
 };
 

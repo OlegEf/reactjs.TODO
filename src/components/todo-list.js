@@ -1,11 +1,18 @@
 import React from 'react';
 
+// import...
+
+// const TodoListItem = ( { label } ) => {
+	// return <span>{ label }</span>;
+// };
 const TodoList = () => {
-	const items = ['Learn React', 'Build Awesome App']; 
+const TodoListItem = ( { label } ) => {
+	return <span>{ label }</span>;
+};
 	return (
-		<ul>
-			<li>{items[0]}</li>
-			<li>{items[1]}</li>
+		<ul className="list-group-item">
+			<li><TodoListItem label="Drink Coffee"/></li>
+			<li><TodoListItem label="Build React App"/></li>
 		</ul>
 	);
 };

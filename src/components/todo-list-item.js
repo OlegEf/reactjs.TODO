@@ -1,9 +1,7 @@
 import React from 'react';
 
-const TodoListItem = () => {
-	return (
-		<h1>my TodoListItem</h1>
-	);
+const TodoListItem = ( { label } ) => {
+	return <span>{ label }</span>;
 };
 
-export default TodoListItem
+export default TodoListItem;
