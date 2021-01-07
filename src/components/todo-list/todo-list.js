@@ -21,6 +21,5 @@ const TodoList = ({ todos }) => {
     </ul>
   );
 };
-//unix LF
-//unix LF 2
+
 export default TodoList;
