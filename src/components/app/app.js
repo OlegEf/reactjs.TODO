@@ -18,7 +18,6 @@ export default class App extends Component {
       this.createTodoItem('Drink Coffee'),
       this.createTodoItem('Make Awesome App'),
       this.createTodoItem('Have a lunch')
-
     ]
   };
 
@@ -26,6 +25,7 @@ createTodoItem(label) {
 	return {
 		label,
 		important: false,
+		done: false,
 		id: this.maxId++
     };
 }
@@ -60,6 +60,25 @@ createTodoItem(label) {
       };
     });
 
+  };
+
+  onToggleDone = (id) => {
+    this.setState(({ todoData }) => {
+		const idx = todoData.findIndex((el) => el.id === id);
+		const oldItem = todoData[idx];
+		const newItem = {...oldItem,
+			done: oldItem.done};
+		const newArray = [
+			...todoData.slice(0, idx),
+			newItem,
+			...todoData.slice(idx + 1)
+      ];
+
+		return{
+			todoData: newArray
+		};
+
+    });
   };
 
   render() {
