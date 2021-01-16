@@ -62,28 +62,47 @@ createTodoItem(label) {
 
   };
 
-  onToggleDone = (id) => {
-    this.setState(({ todoData }) => {
-		const idx = todoData.findIndex((el) => el.id === id);
-		const oldItem = todoData[idx];
-		const newItem = {...oldItem,
-			done: oldItem.done};
-		const newArray = [
-			...todoData.slice(0, idx),
+	toggleProperty(arr, id, propName ) {
+		const idx = arr.findIndex((el) => el.id === id);
+		const oldItem = arr[idx];
+		const newItem = {...oldItem, [propName]: !oldItem[propName]};
+
+		return [
+			...arr.slice(0, idx),
 			newItem,
-			...todoData.slice(idx + 1)
-      ];
+			...arr.slice(idx + 1)
+		];
+		
+	}
 
-		return{
-			todoData: newArray
-		};
+	  onToggleDone = (id) => {
+		this.setState(({ todoData }) => {
+			const idx = todoData.findIndex((el) => el.id === id);
+			const oldItem = todoData[idx];
+			const newItem = {...oldItem,
+				done: oldItem.done};
+			const newArray = [
+				...todoData.slice(0, idx),
+				newItem,
+				...todoData.slice(idx + 1)
+		  ];
 
-    });
-  };
-// 65
+			return{
+				todoData: this.toggleProperty(todoData, id, 'done')
+			};
+		});
+	  };
+
+	onToggleImportant = (id) => {
+		this.setState(({todoData}) => {
+			return {
+				todoData: this.toggleProperty(todoData, id, 'important')
+			};
+		});
+	};
 
   render() {
-	const {todoData} = this.state;
+	const { todoData } = this.state;
 	const doneCount = todoData.filter((el) => el.done).lenght;
 	const todoCount = todoData.lenght-doneCount;
 
