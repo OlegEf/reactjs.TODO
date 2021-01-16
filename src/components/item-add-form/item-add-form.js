@@ -4,6 +4,16 @@ import './item-add-form.css';
 
 export default class ItemAddForm extends Component {
 
+  state = {
+    label: ''
+  };
+
+  onLabelChange = (e) => {
+    this.setState({
+      label: e.target.value
+    });
+  };
+
   render() {
     return (
       <div className="item-add-form">
