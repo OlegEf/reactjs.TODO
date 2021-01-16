@@ -1,4 +1,3 @@
-// Juriy
 import React, { Component } from 'react';
 
 import AppHeader from '../app-header';
