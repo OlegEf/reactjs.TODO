@@ -83,16 +83,20 @@ createTodoItem(label) {
 // 65
 
   render() {
+	const {todoData} = this.state;
+	const doneCount = todoData.filter((el) => el.done).lenght;
+	const todoCount = todoData.lenght-doneCount;
+
     return (
       <div className="todo-app">
-        <AppHeader toDo={1} done={3} />
+        <AppHeader toDo={doneCount} done={todoCount} />
         <div className="top-panel d-flex">
           <SearchPanel />
           <ItemStatusFilter />
         </div>
 
         <TodoList
-          todos={this.state.todoData}
+          todos={todoData}
           onDeleted={ this.deleteItem }/>
 
         <ItemAddForm onItemAdded={this.addItem}/>
